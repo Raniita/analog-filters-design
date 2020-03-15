@@ -1,4 +1,4 @@
-%% Filtro paso bajo Chebyshev
+%% Design filtro paso bajo Chebyshev
 
 % Ganancia maxima banda pasante 20dB
 % Frecuencia corte 1.2kHz
@@ -99,14 +99,24 @@ h = bodeplot(p1,'b',p2,'r',Wpoints,P)
 [residuos, polos, k] = residue(bt,at);
 
 % Calculamos los numeradores
-num1 = abs((residuos(3)^2)*(residuos(4)^2));
-num2 = abs((residuos(1)^2)*(residuos(2)^2));
+%num1 = abs((residuos(3)^2)*(residuos(4)^2));
+%num2 = abs((residuos(1)^2)*(residuos(2)^2));
+%num3 = residuos(5);
+num1 = conv([1 residuos(1)], [1 residuos(2)]);
+num1 = abs(num1(3));
+num2 = conv([1 residuos(3)], [1 residuos(4)]);
+num2 = abs(num2(3));
 num3 = residuos(5);
 
 % Calculamos los denominadores
-den1 = [1 -(polos(3) + polos(4)) (polos(3)^2)*(polos(4)^2)];
-den2 = [1 -(polos(1) + polos(2)) (polos(1)^2)*(polos(2)^2)];
-den3 = [1 polos(5)];
+%den1 = [1 -(polos(3) + polos(4)) (polos(3)^2)*(polos(4)^2)];
+%den2 = [1 -(polos(1) + polos(2)) (polos(1)^2)*(polos(2)^2)];
+%den3 = [1 -polos(5)];
+den1 = conv([1 polos(1)], [1 polos(2)]);
+den1 = [den1(1) -den1(2) den1(3)];
+den2 = conv([1 polos(3)], [1 polos(4)]);
+den2 = [den2(1) -den2(2) den2(3)];
+den3 = [1 -polos(5)];
 
 % Primer cuadratico
 wo1 = sqrt(den1(3));
@@ -127,18 +137,36 @@ Ho3 = num3/wo3;
 
 % Etapas con >Q van antes.
 %Ho = at(6)
-K = (10^(20/20)) * at(6);
+K = (10^(20/20)) * at(6);   % Ganancia de 20dB en banda pasante
+
 K_norm = 1 * at(6);
-K_calc = num1 + num2 + num3;
+K_calc = num1 * num2 * num3;
 
 % Representamos las etapas
 p_cuadratico1 = tf(num1, den1);
 p_cuadratico2 = tf(num2, den2);
 p_simple = tf(num3, den3);
 
-bode(p_cuadratico1)
-bode(p_cuadratico2)
-bode(p_simple)
+X = bodeoptions;
+X.FreqUnits = 'rad/s';
+X.MagUnits = 'db';
+X.Title.String = 'Descomposición Filtro Chebyshev puesto B5';
+X.PhaseVisible = 'off';
+X.XLimMode = 'auto';
+X.YLimMode = 'auto';
+X.Grid = 'on';
+bodeplot(p_cuadratico1,'b',p_cuadratico2,'r', p_simple, 'g', X)
 
 % Utilizar tiff print(tiff) 300px
 %print -dtiff -r300 ./test2
+
+%% Sintesis electronica
+% Ganancia infinita, realimentación multiple
+ref_value = 10 * 10^(-9);   
+
+% Segundo orden [1] 
+[R1_1, C2_1, R3_1, R4_1, C5_1] = lp_reaMult(Ho1, alpha1, wo1, ref_value)
+
+% Segundo orden [2]
+[R1_2, C2_2, R3_2, R4_2, C5_2] = lp_reaMult(Ho2, alpha2, wo2, ref_value)
+
