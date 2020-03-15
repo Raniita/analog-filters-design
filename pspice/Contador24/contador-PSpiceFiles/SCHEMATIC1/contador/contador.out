@@ -1,0 +1,188 @@
+
+**** 03/09/20 17:24:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-contador"  [ F:\simulacionPCB\contador-PSpiceFiles\SCHEMATIC1\contador.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "contador.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Users\detcp\AppData\Roaming\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 120us 0 
+.OPTIONS ADVCONV
+.OPTIONS DIGINITSTATE= 0
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source CONTADOR
+X_U1         N00867 $D_HI $D_HI $D_HI N00685 $D_LO $D_LO $D_HI $D_LO M_UN0001
++  M_UN0002 M_UN0003 M_UN0004 N00495 $G_DPWR $G_DGND 74LS163A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U2         N00495 $D_HI $D_HI $D_HI N00673 $D_HI $D_HI $D_HI $D_LO M_UN0005
++  M_UN0006 M_UN0007 M_UN0008 N00507 $G_DPWR $G_DGND 74LS163A PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3A         N00495 N00495 N00685 $G_DPWR $G_DGND 74LS00 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+X_U3B         N00507 N00507 N00673 $G_DPWR $G_DGND 74LS00 PARAMS:
++ IO_LEVEL=0 MNTYMXDLY=0
+U_DSTM1         STIM(1,1) $G_DPWR $G_DGND N00867 IO_STM IO_LEVEL=0 
++ 0 0
++ +1.42857uS 1
++REPEAT FOREVER
++ +1.42857uS 0
++  +1.42857uS 1
++ ENDREPEAT
+U_DSTM2         STIM(1,1) $G_DPWR $G_DGND M_UN0009 IO_STM IO_LEVEL=0 
++ 0 0
++ +1.11111uS 1
++REPEAT FOREVER
++ +1.11111uS 0
++  +1.11111uS 1
++ ENDREPEAT
+
+**** RESUMING contador.cir ****
+.END
+
+**** 03/09/20 17:24:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-contador"  [ F:\simulacionPCB\contador-PSpiceFiles\SCHEMATIC1\contador.sim ] 
+
+
+ ****     Digital Gate MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_GATE         D_LS00          
+      TPLHMN    0               3.600000E-09 
+      TPLHTY    0               9.000000E-09 
+      TPLHMX    0              15.000000E-09 
+      TPHLMN    0               4.000000E-09 
+      TPHLTY    0              10.000000E-09 
+      TPHLMX    0              15.000000E-09 
+
+
+**** 03/09/20 17:24:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-contador"  [ F:\simulacionPCB\contador-PSpiceFiles\SCHEMATIC1\contador.sim ] 
+
+
+ ****     Digital Edge Triggered FF MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D0_EFF          
+  TPCLKQLHMN    0            
+  TPCLKQLHTY    0            
+  TPCLKQLHMX    0            
+  TPCLKQHLMN    0            
+  TPCLKQHLTY    0            
+  TPCLKQHLMX    0            
+   TPPCQLHMN    0            
+   TPPCQLHTY    0            
+   TPPCQLHMX    0            
+   TPPCQHLMN    0            
+   TPPCQHLTY    0            
+   TPPCQHLMX    0            
+    TWCLKLMN    0            
+    TWCLKLTY    0            
+    TWCLKLMX    0            
+    TWCLKHMN    0            
+    TWCLKHTY    0            
+    TWCLKHMX    0            
+     TWPCLMN    0            
+     TWPCLTY    0            
+     TWPCLMX    0            
+   TSUDCLKMN    0            
+   TSUDCLKTY    0            
+   TSUDCLKMX    0            
+ TSUPCCLKHMN    0            
+ TSUPCCLKHTY    0            
+ TSUPCCLKHMX    0            
+    THDCLKMN    0            
+    THDCLKTY    0            
+    THDCLKMX    0            
+  TSUCECLKMN    0            
+  TSUCECLKTY    0            
+  TSUCECLKMX    0            
+   THCECLKMN    0            
+   THCECLKTY    0            
+   THCECLKMX    0            
+
+
+**** 03/09/20 17:24:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-contador"  [ F:\simulacionPCB\contador-PSpiceFiles\SCHEMATIC1\contador.sim ] 
+
+
+ ****     Digital IO  MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               IO_STM          IO_LS           
+        DRVL    0             157            
+        DRVH    0             108            
+       AtoD1                 AtoD_LS         
+       AtoD2                 AtoD_LS_NX      
+       AtoD3                 AtoD_LS         
+       AtoD4                 AtoD_LS_NX      
+       DtoA1 DtoA_STM        DtoA_LS         
+       DtoA2 DtoA_STM        DtoA_LS         
+       DtoA3 DtoA_STM        DtoA_LS         
+       DtoA4 DtoA_STM        DtoA_LS         
+      TSWHL1                    2.724000E-09 
+      TSWHL2                    2.724000E-09 
+      TSWHL3                    2.724000E-09 
+      TSWHL4                    2.724000E-09 
+      TSWLH1                    2.104000E-09 
+      TSWLH2                    2.104000E-09 
+      TSWLH3                    2.104000E-09 
+      TSWLH4                    2.104000E-09 
+       TPWRT  100.000000E+03  100.000000E+03 
+
+
+
+          JOB CONCLUDED
+
+**** 03/09/20 17:24:38 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-contador"  [ F:\simulacionPCB\contador-PSpiceFiles\SCHEMATIC1\contador.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time                    =         .33
+

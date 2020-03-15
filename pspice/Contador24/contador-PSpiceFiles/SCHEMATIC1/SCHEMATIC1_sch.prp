@@ -1,0 +1,155 @@
+("FILE_TYPE"	"PMAP File"
+    ("devices"
+        ("74LS163A")
+        ("74LS00")
+        ("DigClock")
+    )
+    ("instances"
+        ("U1"
+            ("device_name"	"74LS163A")
+            ("pspice_path"	"X_U1")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+                ("IMPL"
+                    ("value"	"")
+                    ("pspice_param"	"IMPL")
+                )
+            )
+        )
+        ("U2"
+            ("device_name"	"74LS163A")
+            ("pspice_path"	"X_U2")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+                ("IMPL"
+                    ("value"	"")
+                    ("pspice_param"	"IMPL")
+                )
+            )
+        )
+        ("U3A"
+            ("device_name"	"74LS00")
+            ("pspice_path"	"X_U3A")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+                ("IMPL"
+                    ("value"	"")
+                    ("pspice_param"	"IMPL")
+                )
+            )
+        )
+        ("U3B"
+            ("device_name"	"74LS00")
+            ("pspice_path"	"X_U3B")
+            ("level"	"0")
+            ("model_params"
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("MNTYMXDLY"
+                    ("value"	"0")
+                    ("pspice_param"	"MNTYMXDLY")
+                )
+                ("IMPL"
+                    ("value"	"")
+                    ("pspice_param"	"IMPL")
+                )
+            )
+        )
+        ("DSTM1"
+            ("device_name"	"DigClock")
+            ("pspice_path"	"U_DSTM1")
+            ("level"	"0")
+            ("model_params"
+                ("ONTIME"
+                    ("value"	"1.42857uS")
+                    ("pspice_param"	"ONTIME")
+                )
+                ("OFFTIME"
+                    ("value"	"1.42857uS")
+                    ("pspice_param"	"OFFTIME")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("OPPVAL"
+                    ("value"	"1")
+                    ("pspice_param"	"OPPVAL")
+                )
+                ("STARTVAL"
+                    ("value"	"0")
+                    ("pspice_param"	"STARTVAL")
+                )
+                ("DELAY"
+                    ("value"	"")
+                    ("pspice_param"	"DELAY")
+                )
+            )
+        )
+        ("DSTM2"
+            ("device_name"	"DigClock")
+            ("pspice_path"	"U_DSTM2")
+            ("level"	"0")
+            ("model_params"
+                ("ONTIME"
+                    ("value"	"1.11111uS")
+                    ("pspice_param"	"ONTIME")
+                )
+                ("OFFTIME"
+                    ("value"	"1.11111uS")
+                    ("pspice_param"	"OFFTIME")
+                )
+                ("IO_LEVEL"
+                    ("value"	"0")
+                    ("pspice_param"	"IO_LEVEL")
+                )
+                ("IO_MODEL"
+                    ("value"	"IO_STM")
+                    ("pspice_param"	"IO_MODEL")
+                )
+                ("OPPVAL"
+                    ("value"	"1")
+                    ("pspice_param"	"OPPVAL")
+                )
+                ("STARTVAL"
+                    ("value"	"0")
+                    ("pspice_param"	"STARTVAL")
+                )
+                ("DELAY"
+                    ("value"	"")
+                    ("pspice_param"	"DELAY")
+                )
+            )
+        )
+    )
+)
