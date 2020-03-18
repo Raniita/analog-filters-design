@@ -45,16 +45,16 @@ k_pk = 0:1:n-1;
 
 pk = -a*sin((pi/10)*(1+2*k_pk)) + i*b*cos((pi/10)*(1+2*k_pk));
 
-c1 = real(conv([1 pk(1)],[1 pk(5)]));
-c2 = real(conv([1 pk(2)],[1 pk(4)]));
-l1 = real(pk(3));
+c1 = [1 abs(sum(pk(1)+pk(5))) abs(imag(pk(1))*imag(pk(5)))];
+c2 = [1 abs(sum(pk(2)+pk(4))) abs(imag(pk(2))*imag(pk(4)))];
+l1 = [1 abs(pk(3))];
 
 % Comprobacion matlab
 n=N;
 
 [z,p,k] = cheb1ap(n,Rp);
 
-%zplane(z,p)
+zplane(z,p)
 %% Construccion funciones transferencia
 
 %Normalizado
@@ -116,7 +116,6 @@ p2=tf(bt,at);
 P = bodeoptions;
 P.FreqUnits = 'rad/s';
 P.MagUnits = 'db';
-P.MagScale = 'linear';
 P.Title.String = 'Filtro Chebyshev puesto B5';
 %P.PhaseVisible = 'off';
 P.XLimMode = 'auto';
