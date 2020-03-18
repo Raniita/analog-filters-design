@@ -10,7 +10,7 @@
 r_db = 1;
 r_lineal = 10^(r_db/10);
 epsilon = sqrt(r_lineal-1);
-gamma = -25; %atenuacion minima requerida
+gamma = -25; % atenuacion minima requerida
 
 A = 10^(abs(gamma)/20);
 
@@ -19,7 +19,7 @@ wc = 1.2*10^3; %valor corte filtro
 
 ws = w/wc;
 
-g = sqrt((A^2-1)/(epsilon^2)); %parametro que me ayuda a calcular nmin
+g = sqrt((A^2-1)/(epsilon^2)); % parametro que me ayuda a calcular nmin
 
 nmin = log(g+sqrt(g^2-1))/log(ws+sqrt(ws^2-1));
 
@@ -57,7 +57,7 @@ n=N;
 %zplane(z,p)
 %% Construccion funciones transferencia
 
-%Normalizado
+% Normalizado
 b_lineal = [0.2886];
 a_lineal = [1 0.2886];
 
@@ -102,7 +102,6 @@ p1 = tf(b,a);
 
 % Ahora vamos a ajustarlo a la frec de corte que queremos
 % wc tiene que estar en rad/sec
-
 
 wc = 1200*2*pi;
 
