@@ -1,0 +1,11 @@
+* source CHEBY_CUAD2
+R_R6_2         VIN N13888  {R6}  
+R_R9         N13888 VOUT  44k  
+R_R8_2         N13888 N07333  {R8}  
+V_V2         V+ 0 12Vdc
+V_V3         0 V- 12Vdc
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+X_U8         0 N07333 V+ V- VOUT AD817A/AD
+C_C7         0 N13888  39n  
+C_C10         N07333 VOUT  2.2n  
+.PARAM  R6=43.91k R8=10.86k

@@ -1,0 +1,17 @@
+** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+** Creating circuit file "cheby_design_b5-SCHEMATIC1-sim1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10 0.1 1Meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_design_b5-SCHEMATIC1.net" 
+
+
+.END

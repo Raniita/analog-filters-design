@@ -1,0 +1,63 @@
+(ExpressProject "cheby_cuad1"
+  (ProjectVersion "19981106")
+  (ProjectType "Analog or A/D Mixed Mode")
+  (Folder "Design Resources"
+    (Folder "Library")
+    (NoModify)
+    (File ".\cheby_cuad1.dsn"
+      (Type "Schematic Design"))
+    (BuildFileAddedOrDeleted "x")
+    (CompileFileAddedOrDeleted "x")
+    (PSPICE_Regenerate_Netlist_Flag "FALSE"))
+  (Folder "Outputs"
+    (File ".\cheby_cuad1-schematic1.net"
+      (Type "Report")))
+  (Folder "PSpice Resources"
+    (Folder "Simulation Profiles"
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cheby_cuad1-schematic1-sim_cuad1.sim"
+        (DisplayName "SCHEMATIC1-sim_cuad1")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cheby_cuad1-schematic1-sim_cuad1_param.sim"
+        (DisplayName "SCHEMATIC1-sim_cuad1_param")
+        (Type "PSpice Profile"))
+      (File.PSpice.{09528990-3187-11D2-BC7B-00A0C90CBF91}
+         ".\cheby_cuad1-schematic1-sim_cuad1_paramr1.sim"
+        (DisplayName "SCHEMATIC1-sim_cuad1_paramR1")
+        (Type "PSpice Profile"))
+      (ActiveProfile ".\cheby_cuad1-schematic1-sim_cuad1.sim"))
+    (Folder "Model Libraries"
+      (Sort User))
+    (Folder "Stimulus Files"
+      (Sort User))
+    (Folder "Include Files"
+      (Sort User)))
+  (DefaultLibraryBrowseDirectory "library\PSpice")
+  (PartMRUSelector
+    (PARAM
+      (FullPartName "PARAM.Normal")
+      (LibraryName
+         "C:\CADENCE\PSD_14.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SPECIAL.OLB")
+      (DeviceIndex "0"))
+    (0
+      (LibraryName
+         "C:\CADENCE\PSD_14.2\TOOLS\CAPTURE\LIBRARY\PSPICE\SOURCE.OLB")
+      (DeviceIndex "0")))
+  (GlobalState
+    (FileView
+      (Path "Design Resources")
+      (Path "Design Resources" "C:\Cadence\PSD_14.2\tools\cheby_cuad1.dsn")
+      (Path "Design Resources" "C:\Cadence\PSD_14.2\tools\cheby_cuad1.dsn"
+         "SCHEMATIC1")
+      (Path "Outputs")
+      (Path "PSpice Resources")
+      (Path "PSpice Resources" "Simulation Profiles")
+      (Select "Design Resources" "C:\Cadence\PSD_14.2\tools\cheby_cuad1.dsn"
+         "SCHEMATIC1" "PAGE1"))
+    (HierarchyView)
+    (Doc
+      (Type "COrCapturePMDoc")
+      (Frame
+        (Placement "44 0 1 -1 -1 -1 -1 -4 337 0 452"))
+      (Tab 0))))

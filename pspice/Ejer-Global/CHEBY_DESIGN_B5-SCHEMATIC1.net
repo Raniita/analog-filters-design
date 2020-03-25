@@ -1,0 +1,21 @@
+* source CHEBY_DESIGN_B5
+C_C5         N00626 VO_CUAD1  1n  
+R_R8         N18899 N01009  10.86k  
+R_R11         VO_CUAD2 VO_LINEAL  977  
+X_U3         VO_LINEAL N32163 V+ V- VOUT AD817A/AD
+R_R1         VI N18984  18.55k  
+R_R14         N32163 VOUT  79.13k  
+R_R4         N18984 VO_CUAD1  21k  
+C_C12         0 VO_LINEAL  470n  
+R_R3         N18984 N00626  1.52k  
+V_V1         VI 0 DC 0Vdc AC 1Vac 
+R_R12         0 N32163  10k  
+C_C7         0 N18899  39n  
+V_V2         V+ 0 12Vdc
+X_U1         0 N00626 V+ V- VO_CUAD1 AD817A/AD
+C_C10         N01009 VO_CUAD2  2.2n  
+R_R6         VO_CUAD1 N18899  43.91k  
+V_V3         0 V- 12Vdc
+X_U2         0 N01009 V+ V- VO_CUAD2 AD817A/AD
+C_C2         0 N18984  560n  
+R_R9         N18899 VO_CUAD2  44k  

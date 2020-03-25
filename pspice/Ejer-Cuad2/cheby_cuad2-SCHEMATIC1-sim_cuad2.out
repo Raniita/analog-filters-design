@@ -1,0 +1,156 @@
+
+**** 03/20/20 19:25:05 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cheby_cuad2-schematic1-sim_cuad2.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 100000 0.1 10Meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_cuad2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING cheby_cuad2-SCHEMATIC1.net ****
+* source CHEBY_CUAD2
+R_R6_2         VIN N13888  {R6}  
+R_R9         N13888 VOUT  44k  
+R_R8_2         N13888 N07333  {R8}  
+V_V2         V+ 0 12Vdc
+V_V3         0 V- 12Vdc
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+X_U8         0 N07333 V+ V- VOUT AD817A/AD
+C_C7         0 N13888  39n  
+C_C10         N07333 VOUT  2.2n  
+.PARAM  R6=43.91k R8=10.86k
+
+**** RESUMING cheby_cuad2-schematic1-sim_cuad2.sim.cir ****
+.END
+
+**** 03/20/20 19:25:05 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.DX         
+          IS   10.000000E-15 
+
+
+**** 03/20/20 19:25:05 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.QN         
+               NPN             
+          IS  100.000000E-18 
+          BF   75.758        
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/20/20 19:25:05 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4386      
+
+(N07333)     .0019 (N13888)     .0737 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7541 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4386 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 944.5E-06                   (X_U8.15) 944.5E-12                       
+
+(X_U8.31)     .4386                   (X_U8.32) 438.6E+03                       
+
+(X_U8.33)     .4386                   (X_U8.34) 438.6E+03                       
+
+(X_U8.35)     .4386                   (X_U8.36)     .4386                       
+
+(X_U8.40)     .4386                   (X_U8.41)     .3986                       
+
+(X_U8.42)     .4786                   (X_U8.45)     .4386                       
+
+(X_U8.60)    -.5132                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.679E-06
+    X_U8.V1      9.141E-12
+    X_U8.V2      1.002E-11
+    X_U8.V7     -5.232E-13
+    X_U8.V8      4.146E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/20/20 19:25:05 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       52.36
+

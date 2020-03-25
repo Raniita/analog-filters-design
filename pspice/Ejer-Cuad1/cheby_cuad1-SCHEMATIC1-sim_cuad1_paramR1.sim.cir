@@ -1,0 +1,18 @@
+** Profile: "SCHEMATIC1-sim_cuad1_paramR1"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad1-schematic1-sim_cuad1_paramr1.sim ] 
+
+** Creating circuit file "cheby_cuad1-schematic1-sim_cuad1_paramr1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10000 0.1 10Meg
+.STEP LIN PARAM R1 15k 20k 0.5k 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_cuad1-SCHEMATIC1.net" 
+
+
+.END

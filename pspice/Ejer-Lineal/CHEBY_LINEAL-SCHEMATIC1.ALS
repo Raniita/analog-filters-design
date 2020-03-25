@@ -1,0 +1,7 @@
+.ALIASES
+R_R11           R11(1=VIN 2=VOUT ) CN @CHEBY_LINEAL.SCHEMATIC1(sch_1):I16472@ANALOG.R.Normal(chips)
+C_C12           C12(1=0 2=VOUT ) CN @CHEBY_LINEAL.SCHEMATIC1(sch_1):I16502@ANALOG.C.Normal(chips)
+V_V1            V1(+=VIN -=0 ) CN @CHEBY_LINEAL.SCHEMATIC1(sch_1):I16830@SOURCE.VAC.Normal(chips)
+_    _(Vin=VIN)
+_    _(Vout=VOUT)
+.ENDALIASES

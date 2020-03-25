@@ -1,0 +1,15 @@
+.ALIASES
+V_V2            V2(+=V+ -=0 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11582@SOURCE.VDC.Normal(chips)
+R_R3_1          R3_1(1=N11356 2=N11372 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11344@ANALOG.R.Normal(chips)
+V_V3            V3(+=0 -=V- ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11620@SOURCE.VDC.Normal(chips)
+X_U8            U8(+=0 -=N11372 V+=V+ V-=V- OUT=VO1 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I16244@ANLG_DEV.AD817A/AD.Normal(chips)
+C_C2            C2(1=0 2=N11356 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11236@ANALOG.C.Normal(chips)
+C_C5            C5(1=N11372 2=VO1 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11260@ANALOG.C.Normal(chips)
+R_R1_1          R1_1(1=VI 2=N11356 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11284@ANALOG.R.Normal(chips)
+V_V1            V1(+=VI -=0 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11552@SOURCE.VAC.Normal(chips)
+R_R4            R4(1=N11356 2=VO1 ) CN @CHEBY_CUAD1.SCHEMATIC1(sch_1):I11312@ANALOG.R.Normal(chips)
+_    _(Vo1=VO1)
+_    _(V-=V-)
+_    _(V+=V+)
+_    _(Vi=VI)
+.ENDALIASES

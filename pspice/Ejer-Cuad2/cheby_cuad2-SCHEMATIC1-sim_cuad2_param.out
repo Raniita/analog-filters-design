@@ -1,0 +1,1046 @@
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cheby_cuad2-schematic1-sim_cuad2_param.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10000 0.1 10Meg
+.STEP LIN PARAM R8 8k 11k 0.2k 
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_cuad2-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING cheby_cuad2-SCHEMATIC1.net ****
+* source CHEBY_CUAD2
+R_R6_2         VIN N13888  {R6}  
+R_R9         N13888 VOUT  44k  
+R_R8_2         N13888 N07333  {R8}  
+V_V2         V+ 0 12Vdc
+V_V3         0 V- 12Vdc
+V_V1         VIN 0 DC 0Vdc AC 1Vac 
+X_U8         0 N07333 V+ V- VOUT AD817A/AD
+C_C7         0 N13888  39n  
+C_C10         N07333 VOUT  2.2n  
+.PARAM  R6=44k R8=10.6k
+
+**** RESUMING cheby_cuad2-schematic1-sim_cuad2_param.sim.cir ****
+.END
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.DX         
+          IS   10.000000E-15 
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U8.QN         
+               NPN             
+          IS  100.000000E-18 
+          BF   75.758        
+          NF    1            
+          BR    1            
+          NR    1            
+          CN    2.42         
+           D     .87         
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    8.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4006      
+
+(N07333)     .0019 (N13888)     .0548 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4007 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 949.3E-06                   (X_U8.15) 949.3E-12                       
+
+(X_U8.31)     .4007                   (X_U8.32) 400.7E+03                       
+
+(X_U8.33)     .4007                   (X_U8.34) 400.7E+03                       
+
+(X_U8.35)     .4007                   (X_U8.36)     .4007                       
+
+(X_U8.40)     .4007                   (X_U8.41)     .3607                       
+
+(X_U8.42)     .4407                   (X_U8.45)     .4006                       
+
+(X_U8.60)    -.5118                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.449E-03
+    V_V3        -7.455E-03
+    V_V1         1.246E-06
+    X_U8.V1      9.179E-12
+    X_U8.V2      9.981E-12
+    X_U8.V7     -5.218E-13
+    X_U8.V8      3.929E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    8.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4032      
+
+(N07333)     .0019 (N13888)     .0561 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4033 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 949.0E-06                   (X_U8.15) 949.0E-12                       
+
+(X_U8.31)     .4033                   (X_U8.32) 403.3E+03                       
+
+(X_U8.33)     .4033                   (X_U8.34) 403.3E+03                       
+
+(X_U8.35)     .4033                   (X_U8.36)     .4033                       
+
+(X_U8.40)     .4033                   (X_U8.41)     .3633                       
+
+(X_U8.42)     .4433                   (X_U8.45)     .4032                       
+
+(X_U8.60)    -.5119                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.449E-03
+    V_V3        -7.455E-03
+    V_V1         1.276E-06
+    X_U8.V1      9.177E-12
+    X_U8.V2      9.983E-12
+    X_U8.V7     -5.219E-13
+    X_U8.V8      3.944E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    8.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4059      
+
+(N07333)     .0019 (N13888)     .0575 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4060 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 948.7E-06                   (X_U8.15) 948.7E-12                       
+
+(X_U8.31)     .4060                   (X_U8.32) 406.0E+03                       
+
+(X_U8.33)     .4060                   (X_U8.34) 406.0E+03                       
+
+(X_U8.35)     .4060                   (X_U8.36)     .4060                       
+
+(X_U8.40)     .4060                   (X_U8.41)     .3660                       
+
+(X_U8.42)     .4460                   (X_U8.45)     .4059                       
+
+(X_U8.60)    -.5120                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.306E-06
+    X_U8.V1      9.174E-12
+    X_U8.V2      9.986E-12
+    X_U8.V7     -5.220E-13
+    X_U8.V8      3.960E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    8.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4085      
+
+(N07333)     .0019 (N13888)     .0588 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4086 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 948.3E-06                   (X_U8.15) 948.3E-12                       
+
+(X_U8.31)     .4086                   (X_U8.32) 408.6E+03                       
+
+(X_U8.33)     .4086                   (X_U8.34) 408.6E+03                       
+
+(X_U8.35)     .4086                   (X_U8.36)     .4086                       
+
+(X_U8.40)     .4086                   (X_U8.41)     .3686                       
+
+(X_U8.42)     .4486                   (X_U8.45)     .4085                       
+
+(X_U8.60)    -.5121                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.336E-06
+    X_U8.V1      9.171E-12
+    X_U8.V2      9.989E-12
+    X_U8.V7     -5.221E-13
+    X_U8.V8      3.975E-06
+    X_U8.V5     -4.782E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    8.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4112      
+
+(N07333)     .0019 (N13888)     .0601 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4112 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 948.0E-06                   (X_U8.15) 948.0E-12                       
+
+(X_U8.31)     .4112                   (X_U8.32) 411.2E+03                       
+
+(X_U8.33)     .4112                   (X_U8.34) 411.2E+03                       
+
+(X_U8.35)     .4112                   (X_U8.36)     .4112                       
+
+(X_U8.40)     .4112                   (X_U8.41)     .3712                       
+
+(X_U8.42)     .4512                   (X_U8.45)     .4112                       
+
+(X_U8.60)    -.5122                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.366E-06
+    X_U8.V1      9.169E-12
+    X_U8.V2      9.991E-12
+    X_U8.V7     -5.222E-13
+    X_U8.V8      3.990E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    9.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4138      
+
+(N07333)     .0019 (N13888)     .0614 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4139 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 947.6E-06                   (X_U8.15) 947.6E-12                       
+
+(X_U8.31)     .4139                   (X_U8.32) 413.9E+03                       
+
+(X_U8.33)     .4139                   (X_U8.34) 413.9E+03                       
+
+(X_U8.35)     .4139                   (X_U8.36)     .4139                       
+
+(X_U8.40)     .4139                   (X_U8.41)     .3739                       
+
+(X_U8.42)     .4539                   (X_U8.45)     .4138                       
+
+(X_U8.60)    -.5123                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.396E-06
+    X_U8.V1      9.166E-12
+    X_U8.V2      9.994E-12
+    X_U8.V7     -5.223E-13
+    X_U8.V8      4.005E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    9.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4165      
+
+(N07333)     .0019 (N13888)     .0627 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4165 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 947.3E-06                   (X_U8.15) 947.3E-12                       
+
+(X_U8.31)     .4165                   (X_U8.32) 416.5E+03                       
+
+(X_U8.33)     .4165                   (X_U8.34) 416.5E+03                       
+
+(X_U8.35)     .4165                   (X_U8.36)     .4165                       
+
+(X_U8.40)     .4165                   (X_U8.41)     .3765                       
+
+(X_U8.42)     .4565                   (X_U8.45)     .4165                       
+
+(X_U8.60)    -.5124                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.426E-06
+    X_U8.V1      9.163E-12
+    X_U8.V2      9.997E-12
+    X_U8.V7     -5.224E-13
+    X_U8.V8      4.020E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    9.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4191      
+
+(N07333)     .0019 (N13888)     .0641 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4192 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 947.0E-06                   (X_U8.15) 947.0E-12                       
+
+(X_U8.31)     .4192                   (X_U8.32) 419.2E+03                       
+
+(X_U8.33)     .4192                   (X_U8.34) 419.2E+03                       
+
+(X_U8.35)     .4192                   (X_U8.36)     .4192                       
+
+(X_U8.40)     .4192                   (X_U8.41)     .3792                       
+
+(X_U8.42)     .4592                   (X_U8.45)     .4191                       
+
+(X_U8.60)    -.5125                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.456E-06
+    X_U8.V1      9.161E-12
+    X_U8.V2      9.999E-12
+    X_U8.V7     -5.225E-13
+    X_U8.V8      4.035E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    9.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4217      
+
+(N07333)     .0019 (N13888)     .0654 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4218 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 946.6E-06                   (X_U8.15) 946.6E-12                       
+
+(X_U8.31)     .4218                   (X_U8.32) 421.8E+03                       
+
+(X_U8.33)     .4218                   (X_U8.34) 421.8E+03                       
+
+(X_U8.35)     .4218                   (X_U8.36)     .4218                       
+
+(X_U8.40)     .4218                   (X_U8.41)     .3818                       
+
+(X_U8.42)     .4618                   (X_U8.45)     .4217                       
+
+(X_U8.60)    -.5126                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.486E-06
+    X_U8.V1      9.158E-12
+    X_U8.V2      1.000E-11
+    X_U8.V7     -5.226E-13
+    X_U8.V8      4.050E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =    9.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4244      
+
+(N07333)     .0019 (N13888)     .0667 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4245 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 946.3E-06                   (X_U8.15) 946.3E-12                       
+
+(X_U8.31)     .4245                   (X_U8.32) 424.5E+03                       
+
+(X_U8.33)     .4245                   (X_U8.34) 424.5E+03                       
+
+(X_U8.35)     .4245                   (X_U8.36)     .4245                       
+
+(X_U8.40)     .4245                   (X_U8.41)     .3845                       
+
+(X_U8.42)     .4645                   (X_U8.45)     .4244                       
+
+(X_U8.60)    -.5127                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.516E-06
+    X_U8.V1      9.156E-12
+    X_U8.V2      1.000E-11
+    X_U8.V7     -5.227E-13
+    X_U8.V8      4.065E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   10.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4270      
+
+(N07333)     .0019 (N13888)     .0680 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4271 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 946.0E-06                   (X_U8.15) 946.0E-12                       
+
+(X_U8.31)     .4271                   (X_U8.32) 427.1E+03                       
+
+(X_U8.33)     .4271                   (X_U8.34) 427.1E+03                       
+
+(X_U8.35)     .4271                   (X_U8.36)     .4271                       
+
+(X_U8.40)     .4271                   (X_U8.41)     .3871                       
+
+(X_U8.42)     .4671                   (X_U8.45)     .4270                       
+
+(X_U8.60)    -.5128                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.546E-06
+    X_U8.V1      9.153E-12
+    X_U8.V2      1.001E-11
+    X_U8.V7     -5.228E-13
+    X_U8.V8      4.080E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   10.2000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4297      
+
+(N07333)     .0019 (N13888)     .0693 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4297 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 945.6E-06                   (X_U8.15) 945.6E-12                       
+
+(X_U8.31)     .4297                   (X_U8.32) 429.7E+03                       
+
+(X_U8.33)     .4297                   (X_U8.34) 429.7E+03                       
+
+(X_U8.35)     .4297                   (X_U8.36)     .4297                       
+
+(X_U8.40)     .4297                   (X_U8.41)     .3897                       
+
+(X_U8.42)     .4697                   (X_U8.45)     .4297                       
+
+(X_U8.60)    -.5129                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.576E-06
+    X_U8.V1      9.150E-12
+    X_U8.V2      1.001E-11
+    X_U8.V7     -5.229E-13
+    X_U8.V8      4.095E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   10.4000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4323      
+
+(N07333)     .0019 (N13888)     .0707 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4324 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 945.3E-06                   (X_U8.15) 945.3E-12                       
+
+(X_U8.31)     .4324                   (X_U8.32) 432.4E+03                       
+
+(X_U8.33)     .4324                   (X_U8.34) 432.4E+03                       
+
+(X_U8.35)     .4324                   (X_U8.36)     .4324                       
+
+(X_U8.40)     .4324                   (X_U8.41)     .3924                       
+
+(X_U8.42)     .4724                   (X_U8.45)     .4323                       
+
+(X_U8.60)    -.5130                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.606E-06
+    X_U8.V1      9.148E-12
+    X_U8.V2      1.001E-11
+    X_U8.V7     -5.230E-13
+    X_U8.V8      4.110E-06
+    X_U8.V5     -4.781E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   10.6000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4350      
+
+(N07333)     .0019 (N13888)     .0720 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7540 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4350 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 945.0E-06                   (X_U8.15) 945.0E-12                       
+
+(X_U8.31)     .4350                   (X_U8.32) 435.0E+03                       
+
+(X_U8.33)     .4350                   (X_U8.34) 435.0E+03                       
+
+(X_U8.35)     .4350                   (X_U8.36)     .4350                       
+
+(X_U8.40)     .4350                   (X_U8.41)     .3950                       
+
+(X_U8.42)     .4750                   (X_U8.45)     .4350                       
+
+(X_U8.60)    -.5131                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.636E-06
+    X_U8.V1      9.145E-12
+    X_U8.V2      1.002E-11
+    X_U8.V7     -5.231E-13
+    X_U8.V8      4.125E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   10.8000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4376      
+
+(N07333)     .0019 (N13888)     .0733 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7541 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4377 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 944.6E-06                   (X_U8.15) 944.6E-12                       
+
+(X_U8.31)     .4377                   (X_U8.32) 437.7E+03                       
+
+(X_U8.33)     .4377                   (X_U8.34) 437.7E+03                       
+
+(X_U8.35)     .4377                   (X_U8.36)     .4377                       
+
+(X_U8.40)     .4377                   (X_U8.41)     .3977                       
+
+(X_U8.42)     .4777                   (X_U8.45)     .4376                       
+
+(X_U8.60)    -.5132                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.666E-06
+    X_U8.V1      9.142E-12
+    X_U8.V2      1.002E-11
+    X_U8.V7     -5.232E-13
+    X_U8.V8      4.140E-06
+    X_U8.V5     -4.780E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+ ****     CURRENT STEP                     PARAM R8 =   11.0000E+03
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (  VIN)    0.0000  ( VOUT)     .4403      
+
+(N07333)     .0019 (N13888)     .0746 (X_U8.3)     .0020 (X_U8.4)   11.4650     
+
+(X_U8.5)   11.4650 (X_U8.6)    -.7541 (X_U8.7)    -.7539 (X_U8.8)   -1.2705     
+
+(X_U8.9)     .4403 (X_U8.10)    9.5700                   (X_U8.11)   -9.5700    
+
+(X_U8.14) 944.3E-06                   (X_U8.15) 944.3E-12                       
+
+(X_U8.31)     .4403                   (X_U8.32) 440.3E+03                       
+
+(X_U8.33)     .4403                   (X_U8.34) 440.3E+03                       
+
+(X_U8.35)     .4403                   (X_U8.36)     .4403                       
+
+(X_U8.40)     .4403                   (X_U8.41)     .4003                       
+
+(X_U8.42)     .4803                   (X_U8.45)     .4403                       
+
+(X_U8.60)    -.5133                   (X_U8.61)    0.0000                       
+
+(X_U8.62)    0.0000                   (X_U8.98)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -7.450E-03
+    V_V3        -7.455E-03
+    V_V1         1.696E-06
+    X_U8.V1      9.140E-12
+    X_U8.V2      1.002E-11
+    X_U8.V7     -5.233E-13
+    X_U8.V8      4.155E-06
+    X_U8.V5     -4.779E-14
+    X_U8.V6     -4.794E-14
+
+    TOTAL POWER DISSIPATION   1.79E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/20/20 18:56:50 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_cuad2_param"  [ C:\Cadence\PSD_14.2\tools\cheby_cuad2-schematic1-sim_cuad2_param.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+ ****     CURRENT STEP                     PARAM R8 =   11.0000E+03
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =       82.64
+

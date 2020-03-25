@@ -1,0 +1,226 @@
+
+**** 03/20/20 19:49:11 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-schematic1-sim2.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cheby_design_b5-schematic1-sim2.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10000 0.1 10Meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_design_b5-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING cheby_design_b5-SCHEMATIC1.net ****
+* source CHEBY_DESIGN_B5
+C_C5         N00626 VO_CUAD1  1n  
+R_R8         N18899 N01009  10.86k  
+R_R11         VO_CUAD2 VO_LINEAL  977  
+X_U3         VO_LINEAL N32163 V+ V- VOUT AD817A/AD
+R_R1         VI N18984  18.55k  
+R_R14         N32163 VOUT  79.13k  
+R_R4         N18984 VO_CUAD1  21k  
+C_C12         0 VO_LINEAL  470n  
+R_R3         N18984 N00626  1.52k  
+V_V1         VI 0 DC 0Vdc AC 1Vac 
+R_R12         0 N32163  10k  
+C_C7         0 N18899  39n  
+V_V2         V+ 0 12Vdc
+X_U1         0 N00626 V+ V- VO_CUAD1 AD817A/AD
+C_C10         N01009 VO_CUAD2  2.2n  
+R_R6         VO_CUAD1 N18899  43.91k  
+V_V3         0 V- 12Vdc
+X_U2         0 N01009 V+ V- VO_CUAD2 AD817A/AD
+C_C2         0 N18984  560n  
+R_R9         N18899 VO_CUAD2  44k  
+
+**** RESUMING cheby_design_b5-schematic1-sim2.sim.cir ****
+.END
+
+**** 03/20/20 19:49:11 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-schematic1-sim2.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.DX         X_U1.DX         X_U2.DX         
+          IS   10.000000E-15   10.000000E-15   10.000000E-15 
+
+
+**** 03/20/20 19:49:11 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-schematic1-sim2.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U3.QN         X_U1.QN         X_U2.QN         
+               NPN             NPN             NPN             
+          IS  100.000000E-18  100.000000E-18  100.000000E-18 
+          BF   75.758          75.758          75.758        
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+**** 03/20/20 19:49:11 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-schematic1-sim2.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (   VI)    0.0000  ( VOUT)    2.9190      
+
+(N00626)     .0020 (N01009)     .0019 (N18899)     .0738 (N18984)     .0120     
+
+(N32163)     .2688 (X_U1.3)     .0020 (X_U1.4)   11.4650 (X_U1.5)   11.4650     
+
+(X_U1.6)    -.7540 (X_U1.7)    -.7539 (X_U1.8)   -1.2705 (X_U1.9)     .1646     
+
+(X_U2.3)     .0020 (X_U2.4)   11.4650 (X_U2.5)   11.4650 (X_U2.6)    -.7540     
+
+(X_U2.7)    -.7539 (X_U2.8)   -1.2705 (X_U2.9)     .2739 (X_U3.3)     .2696     
+
+(X_U3.4)   11.4650 (X_U3.5)   11.4640 (X_U3.6)    -.4871 (X_U3.7)    -.4864     
+
+(X_U3.8)   -1.0032 (X_U3.9)    2.9193 (X_U1.10)    9.5700                       
+
+(X_U1.11)   -9.5700                   (X_U1.14) 979.2E-06                       
+
+(X_U1.15) 979.2E-12                   (X_U1.31)     .1646                       
+
+(X_U1.32) 164.6E+03                   (X_U1.33)     .1646                       
+
+(X_U1.34) 164.6E+03                   (X_U1.35)     .1646                       
+
+(X_U1.36)     .1646                   (X_U1.40)     .1646                       
+
+(X_U1.41)     .1246                   (X_U1.42)     .2046                       
+
+(X_U1.45)     .1645                   (X_U1.60)    -.5163                       
+
+(X_U1.61)    0.0000                   (X_U1.62)    0.0000                       
+
+(X_U1.98)    0.0000                   (X_U2.10)    9.5700                       
+
+(X_U2.11)   -9.5700                   (X_U2.14) 965.4E-06                       
+
+(X_U2.15) 965.4E-12                   (X_U2.31)     .2739                       
+
+(X_U2.32) 273.9E+03                   (X_U2.33)     .2739                       
+
+(X_U2.34) 273.9E+03                   (X_U2.35)     .2739                       
+
+(X_U2.36)     .2739                   (X_U2.40)     .2739                       
+
+(X_U2.41)     .2339                   (X_U2.42)     .3139                       
+
+(X_U2.45)     .2738                   (X_U2.60)    -.5204                       
+
+(X_U2.61)    0.0000                   (X_U2.62)    0.0000                       
+
+(X_U2.98)    0.0000                   (X_U3.10)    9.5700                       
+
+(X_U3.11)   -9.5700                   (X_U3.14)     .2682                       
+
+(X_U3.15) 268.2E-09                   (X_U3.31)    2.9193                       
+
+(X_U3.32) 2.919E+06                   (X_U3.33)    2.9193                       
+
+(X_U3.34) 2.919E+06                   (X_U3.35)    2.9193                       
+
+(X_U3.36)    2.9193                   (X_U3.40)    2.9193                       
+
+(X_U3.41)    2.8793                   (X_U3.42)    2.9593                       
+
+(X_U3.45)    2.9190                   (X_U3.60)    -.5493                       
+
+(X_U3.61)    0.0000                   (X_U3.62)    0.0000                       
+
+(X_U3.98)    0.0000                   (VO_CUAD1)     .1645                      
+
+(VO_CUAD2)     .2738                  (VO_LINEAL)     .2676                 
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1         6.475E-07
+    V_V2        -2.238E-02
+    V_V3        -2.236E-02
+    X_U3.V1      6.661E-12
+    X_U3.V2      1.250E-11
+    X_U3.V7     -5.593E-13
+    X_U3.V8      1.675E-05
+    X_U3.V5     -4.758E-14
+    X_U3.V6     -4.816E-14
+    X_U1.V1      9.415E-12
+    X_U1.V2      9.745E-12
+    X_U1.V7     -5.263E-13
+    X_U1.V8      4.664E-06
+    X_U1.V5     -4.779E-14
+    X_U1.V6     -4.795E-14
+    X_U2.V1      9.306E-12
+    X_U2.V2      9.854E-12
+    X_U2.V7     -5.304E-13
+    X_U2.V8      5.483E-06
+    X_U2.V5     -4.778E-14
+    X_U2.V6     -4.797E-14
+
+    TOTAL POWER DISSIPATION   5.37E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/20/20 19:49:11 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim2"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-schematic1-sim2.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =        9.36
+

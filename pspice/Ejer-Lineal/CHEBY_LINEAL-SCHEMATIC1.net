@@ -1,0 +1,4 @@
+* source CHEBY_LINEAL
+R_R11         VIN VOUT  977  
+C_C12         0 VOUT  470n  
+V_V1         VIN 0 DC 0Vdc AC 1Vac 

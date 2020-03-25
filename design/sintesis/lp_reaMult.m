@@ -1,10 +1,17 @@
-function [R1, C2, R3, R4, C5] = lp_reaMult (Ho, alpha, omega, ref)
-  C5 = ref;
+function [R1, C2, R3, R4, C5] = lp_reaMult (Ho, alpha, omega, refC5, refC2)
+  C5 = refC5;
   
-  k = (4*(Ho+1))/(alpha)^2;
-  C2 = k*C5;
+  k_min = (4*(Ho+1))/(alpha)^2;
+  %C2 = k * C5;
+  C2 = refC2;
+  k = C2/C5;
   
-  raiz = sqrt(1-(k*k^(-1)));
+  if k < k_min
+      C5 = 0;
+      C2 = 0;
+  end
+  
+  raiz = sqrt(1-(k_min*k^(-1)));
   %while(not(isreal(raiz)))
   %    k1 = k + 0.5;
   %    raiz = sqrt(1-(k*k1^(-1)));

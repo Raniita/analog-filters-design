@@ -1,0 +1,39 @@
+
+**** 03/15/20 21:46:43 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim_lineal"  [ C:\Cadence\PSD_14.2\tools\cheby_lineal-SCHEMATIC1-sim_lineal.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cheby_lineal-SCHEMATIC1-sim_lineal.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10 0.1 1Meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_lineal-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING cheby_lineal-SCHEMATIC1.net ****
+* source CHEBY_LINEAL
+R_R11         N08390 N08378  50k  
+C_C12         N08378 N08378  10n  
+V_V1         N08390 N08378 DC 0Vdc AC 500mVac 
+
+**** RESUMING cheby_lineal-SCHEMATIC1-sim_lineal.sim.cir ****
+.END
+
+ERROR -- Node N08390 is floating
+ERROR -- Node N08378 is floating

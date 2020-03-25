@@ -1,0 +1,214 @@
+
+**** 03/15/20 19:54:51 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cheby_design_b5-SCHEMATIC1-sim1.sim.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Local Libraries :
+* From [PSPICE NETLIST] section of C:\Cadence\PSD_14.2\tools\PSpice\PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.AC DEC 10 0.1 1Meg
+.PROBE V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC ".\cheby_design_b5-SCHEMATIC1.net" 
+
+
+
+**** INCLUDING cheby_design_b5-SCHEMATIC1.net ****
+* source CHEBY_DESIGN_B5
+C_C5         N00626 VO1  10n  
+V_V1         VI 0 DC 0Vdc AC 1Vac 
+R_R8         N00997 N01009  63k  
+R_R11         VO2 0  50k  
+R_R1         VI N00557  133.5k  
+R_R4         N00584 VO1  1.2k  
+C_C12         0 0  10n  
+R_R3         N00557 N00626  1k  
+X_U5         N00626 0 V+ V- VO1 LM741
+R_RA         0 N03395  10k  
+X_U6         N01009 0 V+ V- VO2 LM741
+V_V2         V+ 0 12Vdc
+R_RB         N03395 VO  1k  
+C_C7         0 N01001  9n  
+V_V3         0 V- 12Vdc
+C_C10         N01009 VO2  1n  
+X_U7         N03395 0 V+ V- VO LM741
+R_R6         VO1 N00997  500k  
+C_C2         0 N00584  1.2u  
+R_R9         N01001 VO2  72k  
+
+**** RESUMING cheby_design_b5-SCHEMATIC1-sim1.sim.cir ****
+.END
+
+**** 03/15/20 19:54:51 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.x_lm741.dx X_U5.x_lm741.dy X_U6.x_lm741.dx X_U6.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03    1               1.000000E-03 
+         CJO                   10.000000E-12                   10.000000E-12 
+
+
+               X_U7.x_lm741.dx X_U7.x_lm741.dy 
+          IS  800.000000E-18  800.000000E-18 
+          RS    1               1.000000E-03 
+         CJO                   10.000000E-12 
+
+
+**** 03/15/20 19:54:51 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U5.x_lm741.qx X_U6.x_lm741.qx X_U7.x_lm741.qx 
+               NPN             NPN             NPN             
+          IS  800.000000E-18  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75           93.75         
+          NF    1               1               1            
+          BR    1               1               1            
+          NR    1               1               1            
+          CN    2.42            2.42            2.42         
+           D     .87             .87             .87         
+
+
+**** 03/15/20 19:54:51 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+(   V+)   12.0000  (   V-)  -12.0000  (   VI)    0.0000  (   VO) 58.55E-06      
+
+(  VO1)  -11.7960  (  VO2)  -11.8160  (N00557)    -.0094 (N00584)  -11.7960     
+
+(N00626)    -.0095 (N00997)  -11.7960 (N01001)  -11.8160 (N01009)  -11.7960     
+
+(N03395)-19.25E-06 (X_U5.x_lm741.6)     .1770                                   
+
+(X_U5.x_lm741.7)  -12.7280            (X_U5.x_lm741.8)  -12.7280                
+
+(X_U5.x_lm741.9)    0.0000            (X_U6.x_lm741.6)    1.4948                
+
+(X_U6.x_lm741.7)  -13.8460            (X_U6.x_lm741.8)  -13.8460                
+
+(X_U6.x_lm741.9)    0.0000            (X_U7.x_lm741.6)-6.892E-09                
+
+(X_U7.x_lm741.7) 62.44E-06            (X_U7.x_lm741.8) 62.44E-06                
+
+(X_U7.x_lm741.9)    0.0000            (X_U5.x_lm741.10)    -.6122               
+
+(X_U5.x_lm741.11)   11.9560           (X_U5.x_lm741.12)   11.9650               
+
+(X_U5.x_lm741.13)    -.5967           (X_U5.x_lm741.14)    -.6000               
+
+(X_U5.x_lm741.53)   11.0000           (X_U5.x_lm741.54)  -11.0000               
+
+(X_U5.x_lm741.90)  -18.6290           (X_U5.x_lm741.91)   40.0000               
+
+(X_U5.x_lm741.92)  -40.0000           (X_U5.x_lm741.99)    0.0000               
+
+(X_U6.x_lm741.10)    -.6395           (X_U6.x_lm741.11)   11.9210               
+
+(X_U6.x_lm741.12)   12.0000           (X_U6.x_lm741.13)    -.6117               
+
+(X_U6.x_lm741.14)    -.6395           (X_U6.x_lm741.53)   11.0000               
+
+(X_U6.x_lm741.54)  -11.0000           (X_U6.x_lm741.90)  -40.6060               
+
+(X_U6.x_lm741.91)   40.0000           (X_U6.x_lm741.92)  -40.0000               
+
+(X_U6.x_lm741.99)    0.0000           (X_U7.x_lm741.10)    -.6077               
+
+(X_U7.x_lm741.11)   11.9600           (X_U7.x_lm741.12)   11.9600               
+
+(X_U7.x_lm741.13)    -.5938           (X_U7.x_lm741.14)    -.5938               
+
+(X_U7.x_lm741.53)   11.0000           (X_U7.x_lm741.54)  -11.0000               
+
+(X_U7.x_lm741.90) 77.80E-06           (X_U7.x_lm741.91)   40.0000               
+
+(X_U7.x_lm741.92)  -40.0000           (X_U7.x_lm741.99)    0.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V1        -7.029E-08
+    V_V2        -4.010E-03
+    V_V3         5.499E-02
+    X_U5.x_lm741.vb   1.770E-06
+    X_U5.x_lm741.vc   2.280E-11
+    X_U5.x_lm741.ve  -1.863E-02
+    X_U5.x_lm741.vlim  -1.863E-02
+    X_U5.x_lm741.vlp  -5.863E-11
+    X_U5.x_lm741.vln  -2.138E-11
+    X_U6.x_lm741.vb   1.495E-05
+    X_U6.x_lm741.vc   2.282E-11
+    X_U6.x_lm741.ve  -4.037E-02
+    X_U6.x_lm741.vlim  -4.061E-02
+    X_U6.x_lm741.vlp  -8.061E-11
+    X_U6.x_lm741.vln   1.181E-05
+    X_U7.x_lm741.vb  -6.892E-14
+    X_U7.x_lm741.vc   1.100E-11
+    X_U7.x_lm741.ve   1.091E-11
+    X_U7.x_lm741.vlim   7.780E-08
+    X_U7.x_lm741.vlp  -4.000E-11
+    X_U7.x_lm741.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION  -5.53E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 03/15/20 19:54:51 ******** PSpice 9.2.3 (Jan 2002) ******* ID# 1111111111 
+ ** Profile: "SCHEMATIC1-sim1"  [ C:\Cadence\PSD_14.2\tools\cheby_design_b5-SCHEMATIC1-sim1.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .33
+

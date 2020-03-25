@@ -1,0 +1,11 @@
+* source CHEBY_CUAD1
+V_V2         V+ 0 12Vdc
+R_R3_1         N11356 N11372  {R3}  
+V_V3         0 V- 12Vdc
+X_U8         0 N11372 V+ V- VO1 AD817A/AD
+C_C2         0 N11356  560n  
+C_C5         N11372 VO1  1n  
+R_R1_1         VI N11356  {R1}  
+V_V1         VI 0 DC 0Vdc AC 1Vac 
+R_R4         N11356 VO1  21k  
+.PARAM  R1=18.55k R3=1.52k
